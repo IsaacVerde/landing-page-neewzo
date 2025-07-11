@@ -1,0 +1,465 @@
+/* --- Estilos Gerais (Corpo da Página) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212; /* Preto 'dark mode' */
+    color: #E0E0E0; /* Branco um pouco mais suave */
+    font-family: 'Montserrat', sans-serif; /* Fonte que importamos do Google */
+}
+
+/* --- Estilos da Seção Hero --- */
+.hero-section {
+    height: 100vh; /* Ocupa a altura inteira da tela */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    text-align: center;
+    padding: 0 20px; /* Adiciona um respiro nas laterais em telas menores */
+}
+
+.hero-content {
+    max-width: 800px; /* Largura máxima para o conteúdo não ficar esticado demais */
+}
+
+.hero-title {
+    font-size: 3.5rem; /* Tamanho grande para o título */
+    font-weight: 900; /* Peso máximo da fonte para impacto */
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 40px auto; /* Centraliza e adiciona espaço abaixo */
+    line-height: 1.6; /* Melhora a legibilidade */
+}
+
+/* Placeholder para o futuro player de áudio */
+.audio-player-placeholder {
+    background-color: #222;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 40px;
+    border: 1px dashed #444;
+}
+
+/* Botão de Ação Laranja 'Street' */
+.cta-button {
+    background-color: #FF5722; /* Nosso Laranja 'Street' (Deep Orange) */
+    color: #FFFFFF;
+    
+    padding: 15px 30px;
+    border-radius: 50px; /* Botão com cantos bem arredondados */
+    
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none; /* Remove o sublinhado do link */
+    text-transform: uppercase;
+    
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efeito suave na transição */
+}
+
+.cta-button:hover {
+    background-color: #E64A19; /* Laranja um pouco mais escuro ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento de tamanho */
+}
+/* --- Seção Prova Social --- */
+.social-proof-section {
+    padding: 80px 20px; /* Espaçamento interno da seção */
+    background-color: #181818; /* Um tom um pouco diferente para criar contraste */
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-bottom: 60px; /* Espaço abaixo do título */
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center; /* Centraliza os cards */
+    gap: 30px; /* Espaço entre os cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem a linha em telas menores */
+}
+
+.testimonial-card {
+    background-color: #222;
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 350px; /* Largura máxima de cada card */
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Deixa a imagem redonda */
+    object-fit: cover; /* Garante que a imagem não fique distorcida */
+    margin-bottom: 20px;
+    border: 3px solid #FF5722; /* Borda laranja na foto */
+}
+
+.testimonial-card .quote {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Faz com que o texto ocupe o espaço para alinhar os nomes */
+}
+
+.testimonial-card .author {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #FFFFFF;
+}
+/* --- Seção de Licenças --- */
+.licenses-section {
+    padding: 80px 20px;
+}
+
+.licenses-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Faz todos os cards terem a mesma altura */
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.license-card {
+    background-color: #1E1E1E;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 30px;
+    flex: 1; /* Faz os cards ocuparem o espaço de forma igual */
+    max-width: 400px;
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo do card em coluna */
+    position: relative; /* Necessário para a tag de recomendação */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.license-card:hover {
+    transform: translateY(-10px); /* Efeito de flutuar ao passar o mouse */
+    border-color: #555;
+}
+
+.license-card.recommended {
+    border-color: #FF5722; /* Borda laranja para o card recomendado */
+}
+
+.recommend-tag {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FF5722;
+    color: #FFFFFF;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.license-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+}
+
+.license-header h3 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+.license-header .price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FF5722; /* Preço em laranja */
+}
+
+.features-list {
+    list-style: none; /* Remove as bolinhas da lista */
+    margin-bottom: 30px;
+    flex-grow: 1; /* Empurra o botão para o final */
+}
+
+.features-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #2a2a2a;
+    font-size: 1rem;
+}
+
+.features-list .feature-name {
+    font-weight: 400;
+    color: #999;
+}
+
+.features-list .feature-value {
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: right;
+}
+
+.cta-button-card {
+    background-color: #333;
+    color: #FFFFFF;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: auto; /* Garante que o botão fique na base */
+    transition: background-color 0.3s ease;
+}
+
+.cta-button-card:hover {
+    background-color: #444;
+}
+
+.license-card.recommended .cta-button-card {
+    background-color: #FF5722; /* Botão principal no card recomendado */
+}
+
+.license-card.recommended .cta-button-card:hover {
+    background-color: #E64A19;
+}
+/* --- Seção Catálogo de Beats --- */
+.catalog-section {
+    padding: 80px 20px;
+    background-color: #121212; /* Voltamos ao preto principal */
+}
+
+.beat-grid {
+    display: grid;
+    /* Mágica da responsividade: cria colunas que se ajustam automaticamente */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.beat-card {
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    overflow: hidden; /* Garante que a imagem não passe da borda arredondada */
+    border: 1px solid #2a2a2a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.beat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.beat-artwork {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.beat-content {
+    padding: 20px;
+}
+
+.beat-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.beat-info {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.info-tag {
+    background-color: #333;
+    color: #E0E0E0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.beat-player-placeholder {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #121212;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.play-button-placeholder {
+    width: 30px;
+    height: 30px;
+    background-color: #FF5722;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.waveform-placeholder {
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to right, #444, #444 2px, transparent 2px, transparent 4px);
+    background-size: 4px 100%;
+    opacity: 0.5;
+}
+
+.beat-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.beat-actions .cta-button-card {
+    flex: 1; /* Faz os botões dividirem o espaço */
+}
+
+.beat-actions .cta-button-card.primary {
+    background-color: #FF5722;
+}
+
+.beat-actions .cta-button-card.primary:hover {
+    background-color: #E64A19;
+}
+/* --- Seção Sobre Mim --- */
+.about-section {
+    background-color: #181818;
+    padding: 100px 20px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* --- Seção FAQ --- */
+.faq-section {
+    padding: 80px 20px;
+    background-color: #121212;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 60px auto 0 auto;
+}
+
+.faq-item {
+    background-color: #1E1E1E;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-left: 5px solid #FF5722;
+}
+
+.faq-question {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.faq-answer {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #B3B3B3;
+}
+
+/* --- Rodapé --- */
+.footer-section {
+    background-color: #1E1E1E;
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid #333;
+}
+/* --- Estilos do Player de Áudio (JS) --- */
+
+/* Quando o player tiver a classe 'playing', mudamos o visual do botão */
+.beat-player-placeholder.playing .play-button-placeholder {
+    /* Transforma o círculo em duas barras (um ícone de pause) */
+    background-color: transparent;
+    border-style: double;
+    border-color: #FFFFFF; /* Cor do ícone de pause */
+    border-width: 0 0 0 10px; /* Cria as duas barras do pause */
+    border-radius: 0;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px; /* Ajuste de posição */
+}
+
+
+
+/* --- Responsividade para Licenças --- */
+@media (max-width: 992px) {
+    .licenses-container {
+        flex-direction: column; /* Empilha os cards verticalmente */
+        align-items: center; /* Centraliza os cards empilhados */
+    }
+    .license-card {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+/* Media Query para telas menores (celulares) */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+}
+/* --- Responsividade Final --- */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-text .section-title {
+        text-align: center;
+    }
+}
